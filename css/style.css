@@ -1,0 +1,256 @@
+:root {
+    --violeta: #6e3667;
+    --eleclima: #88d317;
+    --deepplum: rgb(26 3 21);
+    --shadow: rgb(83 83 83);
+    --blanco: #fff;
+    --negro: #000;
+
+    --fuenteprincipal: 'Staatliches', cursive;
+}
+
+html { 
+    font-size: 62.5%; /* Para modificar el valor del REM */
+    box-sizing: border-box; /* Debe estar siempre en mis hojas de CSS */
+    scroll-snap-type: y mandatory; /* (Y) significa de arriba a bajo agrega el scroll por partes despues debo marcarlo en las secciones */
+}
+
+*, *:before, *:after { /* Debe estar siempre en mis hojas CSS */
+    box-sizing: inherit;
+}
+
+/* GLOBALES */
+body {
+    font-size: 16px;
+    background-color: var(--violeta);
+    line-height: 1.5; /* interlineado */
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--negro);
+    font-family: var(--fuenteprincipal);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header__logo {
+    margin: 1rem 0 1rem 0;
+    width: 35rem;
+    height: 10rem;
+}
+
+/* FOOTER */
+.footer {
+    background-color: rgb(26 3 21 / 60%);
+    padding: .5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer__texto {
+    text-align: center;
+    font-family: var(--fuenteprincipal);
+    font-size: 1.5rem;
+}
+.footer__texto span {
+    font-size: 1rem;
+    color: var(--eleclima);
+}
+
+/* NAVEGACION */
+.navegacion {
+    background-color: var(--eleclima);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    /* gap: 3rem; /* FORMA NUEVA NO TODO LOS NAVEGADORES SON COMPATIBLE */
+}
+.navegacion__enlace {
+    font-family: var(--fuenteprincipal);
+    color: var(--violeta);
+    font-size: 3rem;
+    margin-right: 4rem;
+}
+.navegacion__enlace:last-of-type {
+    margin-right: 0;
+}
+.navegacion__enlace--activo, /* QUEDA SIEMPRE ACTIVA LA SELECCION SIRVE PARA MARCAR DONDE ESTAS POSICIONADO */
+.navegacion__enlace:hover {
+    color: var(--blanco);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* PRODUCTOS */
+.titulo__producto {
+    color: var(--blanco);
+    background-color: black;
+}
+
+.producto {
+    background-color: var(--eleclima);
+    padding: .5rem;
+}
+.producto__imagen {
+    width: 100%;
+
+}
+.producto__nombre {
+    font-size: 3rem;
+    font-family: var(--fuenteprincipal);
+    text-align: center;
+    margin: 0 1rem;
+    color: var(--blanco);
+    line-height: 1.2;
+}
+.producto__precio {
+    font-size: 2rem;
+    font-family: var(--fuenteprincipal);
+    text-align: center;
+    margin: 0 1rem;
+    color: var(--violeta);
+    line-height: 1.2;
+}
+
+/* NOSOTROS */
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+@media (min-width: 768px) {
+    .nosotros {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+.nosotros__imagen {
+    width: 100%;
+    grid-row: 1 / 2;
+}
+
+@media (min-width: 768px){
+    .nosotros__imagen {
+        grid-column: 2 / 3;
+    }
+}
+.nosotros__titulo {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+/* BLOQUES */
+.bloque {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+.bloque__:nth-child(3) {
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .bloque {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .bloque__:nth-child(3) {
+        grid-column: 3 / 4;
+    }
+}
+.bloque__titulo {
+    margin: 0;
+    color: var(--eleclima);
+}
+.bloque__imagen{
+    margin-bottom: -3rem;
+}
+.bloque__ p {
+    font-family: var(--fuenteprincipal);
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+/* SECCION PRODUCTO */
+.mercaderia__titulo {
+    text-align: center;
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-family: var(--fuenteprincipal);
+}
+@media (min-width: 768px) {
+.mercaderia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+ }
+}
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.formulario__campo {
+    border: .5rem double var(--eleclima);
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    text-align: center;
+}
+.formulario__submit {
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuenteprincipal);
+    padding: 2rem;
+    background-color: var(--eleclima);
+    grid-column: 1 / 3;
+}
+.formulario__submit:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Agustin Alonso Cantoli">
+    <title>Project-A Store</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="icon" href="img/project.ico"">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace" href="index.html">Tienda</a>
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        
+        <h1 class="mercaderia__titulo">Rodilleras Unbroken Rojas</h1>
+        <div class="mercaderia">
+            <img class="mercaderia__img" src="/img/rodilleras/r3.png" alt="Rodilleras Unbroken Rojas">
+
+            <div class="mercaderia__contenido">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Officiis est temporibus voluptas! Consequatur non quos, commodi 
+                totam reiciendis, facilis maxime voluptatem culpa fugit, optio in nesciunt.
+                </p>
+
+                <form class="formulario">
+                    <select class="formulario__campo">
+                        <option disabled selected>-Selecciona Talle-</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+                    <input class="formulario__submit" type="submit" value="Agregar al Carrito"
+                </form>
+            </div>
+        </div><!-- ESTE DIV CIERRA MERCADERIA -->
+    </main>
+
+    <footer class="footer">
+
+        <p class="footer__texto">Seguime en <a href="" target="_blank">Instagram</a></p>
+        <p class="footer__texto">Freelancer Developer Web <span>AAC</span></p>
+        <p class="footer__texto">Copyright - Todos los derechos reservados <span>Project-A</span></p>
+
+    </footer>
+    
+</body>
+</html>
